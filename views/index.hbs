@@ -8,6 +8,7 @@
 <button type="button" onclick="getOkuResponse()" class="btn btn-info">Oku</button>
 <button type="button" onclick="getAcResponse()" class="btn btn-success">Aç</button>
 <button type="button" onclick="getKapatResponse()" class="btn btn-danger">Kapat</button>
+<button type="button" onclick="getSixResponse()" class="btn btn-info">666</button>
 
 <script>
 function getOkuResponse() {
@@ -31,6 +32,17 @@ function getAcResponse() {
   };
   xhttp.open("GET", "/oku/ac", true);
   xhttp.send();
+}
+function getSixResponse() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("GelenData").innerHTML =
+                    this.responseText;
+        }
+    };
+    xhttp.open("GET", "/oku/666", true);
+    xhttp.send();
 }
 function getKapatResponse() {
   var xhttp = new XMLHttpRequest();
