@@ -21,7 +21,7 @@ router.get('/oku', function (req, res, next) {
 router.get('/oku/ac', function (req, res, next) {
   var id = req.body.id;
   console.log("LOG:"+req.param);
-    fs.writeFile(__dirname + "/yazilan.txt", "{"color":[255,0,0]}", function (err) {
+    fs.writeFile(__dirname + "/yazilan.txt", '{"color":[255,0,0]}', function (err) {
       if (err) {
         return console.log(err);
         res.send("acilamadi" + err);
@@ -32,7 +32,7 @@ router.get('/oku/ac', function (req, res, next) {
 router.get('/oku/kapat', function (req, res, next) {
   var id = req.body.id;
   console.log("LOG:"+req.param);
-    fs.writeFile(__dirname + "/yazilan.txt", "{"color":[0,255,0]}", function (err) {
+    fs.writeFile(__dirname + "/yazilan.txt", '{"color":[0,255,0]}', function (err) {
       if (err) {
         return console.log(err);
         res.send("kapatilmadi" + err);
