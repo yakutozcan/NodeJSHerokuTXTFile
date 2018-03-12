@@ -39,15 +39,15 @@ router.get('/oku/kapat', function (req, res, next) {
       }
       res.send("kapandi");
     });
-  router.get('/oku/666', function (req, res, next) {
+  router.get('/oku/six', function (req, res, next) {
   var id = req.body.id;
   console.log("LOG:"+req.param);
     fs.writeFile(__dirname + "/yazilan.txt", '{"color":[0,128,128]}', function (err) {
       if (err) {
         return console.log(err);
-        res.send("666" + err);
+        res.send("six" + err);
       }
-      res.send("666");
+      res.send("six");
     });
 });
 module.exports = router;
